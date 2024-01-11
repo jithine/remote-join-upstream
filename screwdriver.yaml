@@ -8,6 +8,14 @@ jobs:
     second:
         requires:
             - first
+            - sd@12908:component
+            - sd@12909:component
+            - sd@12910:component
+        steps:
+            - echo: echo second
+    third:
+        requires:
+            - second
             - sd@12908:first
             - sd@12908:second
             - sd@12908:third
@@ -18,4 +26,5 @@ jobs:
             - sd@12910:second
             - sd@12910:third
         steps:
-            - echo: echo second
+            - echo: echo third
+
