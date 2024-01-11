@@ -1,0 +1,21 @@
+shared:
+    image: node:20
+jobs:
+    first:
+        requires: [~pr, ~commit]
+        steps: 
+            - echo: echo first
+    second:
+        requires:
+            - first
+            - sd@1:first
+            - sd@1:second
+            - sd@1:third
+            - sd@2:first
+            - sd@2:second
+            - sd@2:third
+            - sd@3:first
+            - sd@3:second
+            - sd@3:third
+        steps:
+            - echo: echo second
