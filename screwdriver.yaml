@@ -8,14 +8,14 @@ jobs:
     second:
         requires:
             - first
-            - sd@1:first
-            - sd@1:second
-            - sd@1:third
-            - sd@2:first
-            - sd@2:second
-            - sd@2:third
-            - sd@3:first
-            - sd@3:second
-            - sd@3:third
+            - sd@12908:first
+            - sd@12908:second
+            - sd@12908:third
+            - sd@12909:first
+            - sd@12909:second
+            - sd@12909:third
+            - sd@12910:first
+            - sd@12910:second
+            - sd@12910:third
         steps:
             - echo: echo second
