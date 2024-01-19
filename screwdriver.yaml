@@ -1,30 +1,29 @@
 shared:
-    image: node:20
+  image: node:20
 jobs:
-    first:
-        requires: [~pr, ~commit]
-        steps: 
-            - echo: echo first
-    second:
-        requires:
-            - first
-            - sd@12908:component
-            - sd@12909:component
-            - sd@12910:component
-        steps:
-            - echo: echo second
-    third:
-        requires:
-            - second
-            - sd@12908:first
-            - sd@12908:second
-            - sd@12908:third
-            - sd@12909:first
-            - sd@12909:second
-            - sd@12909:third
-            - sd@12910:first
-            - sd@12910:second
-            - sd@12910:third
-        steps:
-            - echo: echo third
-
+  first:
+    requires: [~pr, ~commit]
+    steps:
+      - echo: echo first
+  second:
+    requires:
+      - first
+      - sd@2052:component
+      - sd@2053:component
+      - sd@2054:component
+    steps:
+      - echo: echo second
+  third:
+    requires:
+      - second
+      - sd@2052:first
+      - sd@2052:second
+      - sd@2052:third
+      - sd@2053:first
+      - sd@2053:second
+      - sd@2053:third
+      - sd@2054:first
+      - sd@2054:second
+      - sd@2054:third
+    steps:
+      - echo: echo third
