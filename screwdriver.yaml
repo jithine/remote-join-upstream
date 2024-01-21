@@ -1,6 +1,10 @@
 shared:
   image: node:20
 jobs:
+  zero:
+    requires: [~pr]
+    steps:
+      - echo: echo zero
   first:
     requires: [~pr, ~commit]
     steps:
